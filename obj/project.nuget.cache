@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WRICNmh1Krih19DeTRltqHSVbbdJXMBQW/X2t1/XF1h9SUO3wSkW0B9jM7q6GRNGm7fyYltiylwDFIXjRVW2/Q==",
+  "dgSpecHash": "f7REzR0R23U7qdusrflze8tUZ934tTWmRTrSc4WD5sNUk+JnPv8deQ82gNNCZ2WywOKIwFIN5PSwQH0s7Oq3sA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Erick\\source\\repos\\PruebaAdventureWorks\\PruebaAdventureWorks\\PruebaAdventureWorks.csproj",
+  "projectFilePath": "C:\\Users\\Erick\\source\\repos\\PruebaAdventureWorks\\PruebaAdventureWorks.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Erick\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Erick\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
