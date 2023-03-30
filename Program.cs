@@ -12,7 +12,7 @@ builder.Services.AddDbContext<AdventureWorks2019Context>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("conexion"));
 });
 
-builder.Services.AddScoped<IGenericRepository<Person>, GenericRepository>();
+builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 
 var app = builder.Build();
 

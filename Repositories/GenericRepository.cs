@@ -5,7 +5,7 @@ using PruebaAdventureWorks.Repositories.Contracts;
 
 namespace PruebaAdventureWorks.Repository
 {
-    public class GenericRepository : IGenericRepository<Person>
+    public class GenericRepository : IGenericRepository
     {
         private readonly AdventureWorks2019Context _context;
 
@@ -14,9 +14,18 @@ namespace PruebaAdventureWorks.Repository
             _context = context;
         }
 
-        public IEnumerable<Person> GetClientes()
+        public List<Person> GetClientes()
         {
-            return _context.People.ToList();
+            var query = from person in _context.People
+                        join address in _context.Addresses on person.BusinessEntityId equals address.AddressId
+                        select new Person
+                        {
+                            FirstName = person.FirstName,
+                            LastName = person.LastName,
+                            AddressLine1 = address.AddressLine1,
+                        };
+
+            return query.ToList();
         }
     }
 }

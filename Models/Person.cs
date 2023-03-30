@@ -73,10 +73,12 @@ namespace PruebaAdventureWorks.Models
         public virtual BusinessEntity BusinessEntity { get; set; } = null!;
         public virtual Employee? Employee { get; set; }
         public virtual Password? Password { get; set; }
+        public virtual Address? Address { get; set; }
         public virtual ICollection<BusinessEntityContact> BusinessEntityContacts { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<EmailAddress> EmailAddresses { get; set; }
         public virtual ICollection<PersonCreditCard> PersonCreditCards { get; set; }
         public virtual ICollection<PersonPhone> PersonPhones { get; set; }
+        public string AddressLine1 { get; internal set; }
     }
 }

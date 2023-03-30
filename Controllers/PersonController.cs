@@ -7,17 +7,18 @@ namespace PruebaAdventureWorks.Controllers
 {
     public class PersonController : Controller
     {
-        private readonly IGenericRepository<Person> _repository;
+        private readonly IGenericRepository _repository;
 
-        public PersonController(IGenericRepository<Person> repository)
+        public PersonController(IGenericRepository repository)
         {
             _repository = repository;
         }
 
         public IActionResult Index()
         {
-            var person = _repository.GetClientes();
-            return View(person);
+            var persons = _repository.GetClientes();
+
+            return View(persons);
         }
     }
 }
