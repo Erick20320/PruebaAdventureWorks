@@ -12,10 +12,10 @@ namespace PruebaAdventureWorks.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
-        {
-            var clientes = _context.Customers.ToList();
-            return View(clientes);
-        }
+        //public IActionResult Index()
+        //{
+        //    var clientes = _context.Customers.ToList();
+        //    return View(clientes);
+        //}
     }
 }

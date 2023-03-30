@@ -14,6 +14,5 @@ namespace PruebaAdventureWorks.DataContext
         {
         }
 
-        public virtual DbSet<Customer> Customers { get; set; }
     }
 }

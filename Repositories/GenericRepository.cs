@@ -5,7 +5,7 @@ using PruebaAdventureWorks.Repositories.Contracts;
 
 namespace PruebaAdventureWorks.Repository
 {
-    public class GenericRepository : IGenericRepository
+    public class GenericRepository //: IGenericRepository
     {
         private readonly AdventureWorksContext _context;
 
@@ -14,9 +14,9 @@ namespace PruebaAdventureWorks.Repository
             _context = context;
         }
 
-        public IEnumerable<Customer> GetClientes()
-        {
-            return _context.Customers.ToList();
-        }
+        //public IEnumerable<Customer> GetClientes()
+        //{
+        //    return _context.Customers.ToList();
+        //}
     }
 }

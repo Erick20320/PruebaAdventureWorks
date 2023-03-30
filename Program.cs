@@ -11,7 +11,7 @@ builder.Services.AddDbContext<AdventureWorksContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("conexion"));
 });
 
-builder.Services.AddScoped<IGenericRepository, GenericRepository>();
+//builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 
 var app = builder.Build();
 
