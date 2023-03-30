@@ -1,0 +1,21 @@
+﻿@model List<ProductInfo>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Producto</th>
+            <th>Precio</th>
+            <th>Cantidad Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductInfo product in Model)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.Price</td>
+                <td>@product.TotalStock</td>
+            </tr>
+        }
+    </tbody>
+</table>
