@@ -5,18 +5,18 @@ using PruebaAdventureWorks.Repositories.Contracts;
 
 namespace PruebaAdventureWorks.Repository
 {
-    public class GenericRepository //: IGenericRepository
+    public class GenericRepository : IGenericRepository<Person>
     {
-        private readonly AdventureWorksContext _context;
+        private readonly AdventureWorks2019Context _context;
 
-        public GenericRepository(AdventureWorksContext context)
+        public GenericRepository(AdventureWorks2019Context context)
         {
             _context = context;
         }
 
-        //public IEnumerable<Customer> GetClientes()
-        //{
-        //    return _context.Customers.ToList();
-        //}
+        public IEnumerable<Person> GetClientes()
+        {
+            return _context.People.ToList();
+        }
     }
 }

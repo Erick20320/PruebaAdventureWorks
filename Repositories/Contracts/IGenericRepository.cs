@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace PruebaAdventureWorks.Repositories.Contracts
 {
-    //public interface IGenericRepository
-    //{
-    //    IEnumerable<Customer> GetClientes();
-    //}
+    public interface IGenericRepository<T>
+    {
+        IEnumerable<T> GetClientes();
+    }
 }
