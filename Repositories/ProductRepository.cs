@@ -13,7 +13,7 @@ namespace PruebaAdventureWorks.Repositories
             _context = context;
         }
 
-        public TopProduct GetProductos()
+        public TopProduct GetProducto()
         {
             var query = (from detail in _context.SalesOrderDetails
                               join product in _context.Products on detail.ProductId equals product.ProductId

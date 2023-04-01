@@ -24,16 +24,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Person/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
+[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Person/Persons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXFBlcnNvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Person/Index2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4Mi5jc2h0bWw=
+[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Product/ProductsInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0c0luZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Product/Index3.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleDMuY3NodG1s
+[C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Product/TopProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxUb3BQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Erick/source/repos/PruebaAdventureWorks/Views/Shared/Error.cshtml]
