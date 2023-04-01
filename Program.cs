@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PruebaAdventureWorks.DataContext;
 using PruebaAdventureWorks.Models;
+using PruebaAdventureWorks.Repositories;
 using PruebaAdventureWorks.Repositories.Contracts;
 using PruebaAdventureWorks.Repository;
 
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<AdventureWorks2019Context>(options => {
 });
 
 builder.Services.AddScoped<IGenericRepository, GenericRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
