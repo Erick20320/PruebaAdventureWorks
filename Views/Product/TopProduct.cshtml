@@ -1,16 +1,45 @@
 ﻿@model TopProduct
 
-<table>
+@{
+    ViewData["Title"] = "Producto más pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Producto más pedido</h1>
+
+<table class="table table-striped" id="mydataTable">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Total Ordenes</th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Total Ordenes
+            </th>
         </tr>
     </thead>
     <tbody>
-            <tr>
-                <td>@Model.ProductName</td>
-                <td>@Model.TotalOrders</td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.TotalOrders)
+            </td>
+        </tr>
     </tbody>
 </table>
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $('#mydataTable').DataTable();
+            });
+        });
+
+    </script>
+
+}
