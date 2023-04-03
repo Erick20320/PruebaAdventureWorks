@@ -1,4 +1,5 @@
-﻿using PruebaAdventureWorks.DataContext;
+﻿using Microsoft.EntityFrameworkCore;
+using PruebaAdventureWorks.DataContext;
 using PruebaAdventureWorks.Models;
 using PruebaAdventureWorks.Repositories.Contracts;
 
@@ -15,7 +16,9 @@ namespace PruebaAdventureWorks.Repositories
 
         public TopProduct GetProducto()
         {
-            var query = (from detail in _context.SalesOrderDetails
+            try
+            {
+                var query = (from detail in _context.SalesOrderDetails
                               join product in _context.Products on detail.ProductId equals product.ProductId
                               group detail by product.Name into g
                               orderby g.Sum(d => d.OrderQty) descending
@@ -25,7 +28,36 @@ namespace PruebaAdventureWorks.Repositories
                                   TotalOrders = g.Sum(d => d.OrderQty)
                               }).FirstOrDefault();
 
-            return query;
+                return query;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public async Task<List<Product>> GetAllProducts()
+        {
+            try
+            {
+                return await _context.Products.ToListAsync();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public async Task<Product> GetProductById(int id)
+        {
+            try
+            {
+                return await _context.Products.FindAsync(id);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

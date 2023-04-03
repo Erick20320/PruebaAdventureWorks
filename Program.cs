@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AdventureWorks2019Context>(options => {
 
 builder.Services.AddScoped<IGenericRepository, GenericRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
 
 var app = builder.Build();
 

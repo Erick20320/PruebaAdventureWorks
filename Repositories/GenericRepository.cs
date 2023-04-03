@@ -16,16 +16,23 @@ namespace PruebaAdventureWorks.Repository
 
         public List<Person> GetClientes()
         {
-            var query = from person in _context.People
-                        join address in _context.Addresses on person.BusinessEntityId equals address.AddressId
-                        select new Person
-                        {
-                            FirstName = person.FirstName,
-                            LastName = person.LastName,
-                            AddressLine1 = address.AddressLine1,
-                        };
+            try
+            {
+                var query = from person in _context.People
+                            join address in _context.Addresses on person.BusinessEntityId equals address.AddressId
+                            select new Person
+                            {
+                                FirstName = person.FirstName,
+                                LastName = person.LastName,
+                                AddressLine1 = address.AddressLine1,
+                            };
 
-            return query.ToList();
+                return query.ToList();
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

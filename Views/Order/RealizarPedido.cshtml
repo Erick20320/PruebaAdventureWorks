@@ -1,0 +1,21 @@
+﻿@model Product
+
+<h2>Realizar Pedido</h2>
+
+<form method="post" asp-action="RealizarPedido">
+    <div class="form-group">
+        <label for="ProductoId">Seleccione un producto:</label>
+        <select class="form-control" id="ProductoId" name="ProductoId">
+            @foreach (var producto in ViewBag.Productos)
+            {
+                <option value="@producto.Producto">@producto.Nombre</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Cantidad">Cantidad:</label>
+        <input type="number" class="form-control" id="Cantidad" name="Cantidad" value="1" min="1">
+    </div>
+    <button type="submit" class="btn btn-primary">Realizar Pedido</button>
+
+</form>
